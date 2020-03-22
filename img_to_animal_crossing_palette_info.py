@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import os
-from PIL import Image, ImagePalette
+from PIL import Image
 import numpy as np
 from sklearn.cluster import KMeans
 import argparse
