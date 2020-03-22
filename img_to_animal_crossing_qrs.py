@@ -40,7 +40,7 @@ def main(args):
     np_im = np.array(im_prc)
 
     img, cluster_inds, custom_palette = cluster(np_im)
-    img = np.repeat(np.repeat(img, 64, axis=0), 64, axis=1)
+    img = np.repeat(np.repeat(img, 16, axis=0), 16, axis=1)
 
     im_prc = Image.fromarray(img)
     file_out = (os.path.splitext(args.file_in)[0] +

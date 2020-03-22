@@ -71,7 +71,7 @@ def main(args):
         img, palette_img, inds, palette = cluster(np_im)
 
         # Save color image
-        img = np.repeat(np.repeat(img, 64, axis=0), 64, axis=1)
+        img = np.repeat(np.repeat(img, 16, axis=0), 16, axis=1)
         im_prc = Image.fromarray(img.astype('uint8'), 'RGB')
         file_out = (os.path.splitext(args.file_in)[0] +
                     "_cp-{0}x{1}-custom".format(args.h, args.w) +
@@ -108,7 +108,7 @@ def main(args):
             palette = args.palette
             q_im, inds = quantize(np_im, color_palettes['palettes'].item()[palette])
 
-            q_im = np.repeat(np.repeat(q_im, 64, axis=0), 64, axis=1)
+            q_im = np.repeat(np.repeat(q_im, 16, axis=0), 16, axis=1)
             im_prc = Image.fromarray(q_im.astype('uint8'), 'RGB')
 
             file_out = (os.path.splitext(args.file_in)[0] + 
@@ -126,7 +126,7 @@ def main(args):
                 palette = i
                 q_im, inds = quantize(np_im, color_palettes['palettes'].item()[i])
 
-                q_im = np.repeat(np.repeat(q_im, 64, axis=0), 64, axis=1)
+                q_im = np.repeat(np.repeat(q_im, 16, axis=0), 16, axis=1)
                 im_prc = Image.fromarray(q_im.astype('uint8'), 'RGB')
 
                 file_out = (os.path.splitext(args.file_in)[0] + 
