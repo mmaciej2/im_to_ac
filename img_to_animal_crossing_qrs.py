@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# Copyright 2020 Matthew Maciejewski
+
 
 import os
 from PIL import Image

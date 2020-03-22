@@ -1,3 +1,5 @@
+# Copyright 2020 Matthew Maciejewski
+
 from ac_bytes_to_png import ACBuilder
 
 str_a = '4026c'
