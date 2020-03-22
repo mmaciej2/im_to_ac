@@ -29,4 +29,4 @@ def generate_code(height, width, cluster_inds, custom_palette, base_filename):
                 str_f += "{0:01x}{1:01x}".format(int_list[idx+1], int_list[idx])
 
             ACBuilder(str_a + str_b + str_c + str_d + str_e + str_f + str_g,
-                      base_filename+'-{0}x{1}_{2}-{3}.png'.format(height, width, i, j))
+                      base_filename+'_qr-{0}x{1}_code-{2}-{3}.png'.format(height, width, i, j))

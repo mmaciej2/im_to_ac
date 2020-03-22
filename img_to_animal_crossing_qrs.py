@@ -40,10 +40,11 @@ def main(args):
     np_im = np.array(im_prc)
 
     img, cluster_inds, custom_palette = cluster(np_im)
+    img = np.repeat(np.repeat(img, 64, axis=0), 64, axis=1)
 
     im_prc = Image.fromarray(img)
     file_out = (os.path.splitext(args.file_in)[0] +
-                "-{0}x{1}-custom".format(args.h, args.w) +
+                "_qr-{0}x{1}-custom".format(args.h, args.w) +
                 ".png")
     im_prc.save(file_out)
 
