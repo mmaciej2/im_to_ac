@@ -16,9 +16,9 @@ This converts an image into a format that can can be read into the game via QR c
 
 These scripts require python 3 as well as the following packages:
 
-numpy
-scikit-learn
-Pillow
+numpy  
+scikit-learn  
+Pillow  
 PyQRCode
 
 ## Usage
